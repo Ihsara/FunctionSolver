@@ -146,12 +146,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Solver\MainSolver.c" />
+    <ClCompile Include="MainSolver.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Solver\FractionHandler.h" />
-    <ClInclude Include="..\..\..\Solver\MainSolver.h" />
-    <ClInclude Include="..\..\..\Solver\mathFunc.h" />
+    <ClInclude Include="FractionHandler.h" />
+    <ClInclude Include="mathFunc.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
