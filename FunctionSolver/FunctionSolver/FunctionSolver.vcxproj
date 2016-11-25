@@ -149,6 +149,8 @@
     <ClCompile Include="MainSolver.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\Solver\CubicSolver.h" />
+    <ClInclude Include="..\..\..\Solver\RootHandler.h" />
     <ClInclude Include="FractionHandler.h" />
     <ClInclude Include="mathFunc.h" />
   </ItemGroup>
