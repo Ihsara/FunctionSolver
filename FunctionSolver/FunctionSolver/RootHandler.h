@@ -10,7 +10,30 @@ typedef struct Root {
 	int para; // is a 
 }Root;
 
+//Root basic structure: a*root_n(b), with a,b is a fraction
+typedef struct Root_Fraction {	
+	int degree; // is n in a*root_n(b)
+	Fraction base;// is b in a*root_n(b)
+	Fraction para; // is a in a*root_n(b)
+}Root_Fraction;
+
+//Composite of 2 types(Root_Fraction and Fraction):x+ a*root_n(b), with a, b, x is a fraction
+typedef struct Composite_RootFraction_Fraction {	
+	Fraction component1; 
+	Root_Fraction component2; 
+}Composite_RootFraction_Fraction;
+
+//a pair of Composite_RootFraction_Fraction
+typedef struct Composite_RootFraction_Fraction_Pair {	
+	//Composite of 2 types(Root_Fraction and Fraction):x+ a*root_n(b), with a, b, x is a fraction
+	Composite_RootFraction_Fraction t_cube;
+	Composite_RootFraction_Fraction s_cube;
+}Composite_RootFraction_Fraction_Pair;
+
+
 //Functions in this header files:
+//____________________________________________________________________________________________// 
+//Functions for Root struct
 
 //Basic addtion. E.g: 5\sqrt{2} + 15\sqrt{2} = 20\sqrt{2} 
 Root rAdd(Root, Root); 
@@ -20,8 +43,17 @@ Root rSubtract(Root, Root);
 Root rMul(Root, Root);
 //Basic devision. TBD
 Root rDiv(Root, Root);
+//Basic power
 Root rPow(Root, int);
 Root rReduce(Root);
+
+//____________________________________________________________________________________________// 
+//Functions for Root_Fraction struct
+
+//Addition 
+Root_Fraction rfAdd(Root_Fraction, Root_Fraction);
+//Division from a Root_Fraction to a Fraction struct. There is only simple fraction reduction but not root reduction.  
+Root_Fraction rfDiv_Fraction(Root_Fraction, Fraction);
 
 Root rAdd(Root a, Root b) {
 	Root ans;
@@ -57,6 +89,14 @@ Root rPow(Root a, int deg) {
 	}
 }
 
+Root_Fraction rfDiv_Fraction(Root_Fraction divisor, Fraction dividend) {
+	Root_Fraction ans; 
+	int gcd_temp; 
+	ans.degree = divisor.degree; 
+	ans.base = divisor.base; 
+	ans.para = fReduce(fDiv(divisor.para, dividend)); 
+	return ans; 
+}
 
 
 

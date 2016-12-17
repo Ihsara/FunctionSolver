@@ -13,7 +13,7 @@ void main() {
 	frac1 = FractionInput("What fraction do you want to input: ");
 	frac2 = FractionInput("What fraction do you want to input 2: ");
 
-	sum = fAdd(frac1, frac2);
+	sum = fAdd( frac1, frac2);
 	printf("Addition: %d/%d\n", sum.numerator, sum.denominator);
 
 	offsets = fSubtract(frac1, frac2);
@@ -27,7 +27,7 @@ void main() {
 
 	printf("Please enter degree for power of input 1: ");
 	scanf_s("  %d", &deg);
-	pow = fPow(frac1, deg);
+	pow = fPow(frac1, deg );
 	printf("Power: %d/%d\n", pow.numerator, pow.denominator);
 
 	do {
@@ -43,13 +43,13 @@ void main() {
 		else {
 			printf("Result = %d\n", result);
 		}
-
+		
 		printf("Cont. ? (1/0)");
-		scanf_s(" %d", &cont);
+		scanf_s(" %d", &cont); 		
 	} while (cont == 1);
 
 	getchar();
 
 }
-
+  
 

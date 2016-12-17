@@ -151,7 +151,6 @@
   <ItemGroup>
     <ClInclude Include="..\..\..\Solver\CubicSolver.h" />
     <ClInclude Include="..\..\..\Solver\FractionHandler.h" />
-    <ClInclude Include="..\..\..\Solver\FractionType.h" />
     <ClInclude Include="..\..\..\Solver\mathFunc.h" />
     <ClInclude Include="..\..\..\Solver\RootHandler.h" />
   </ItemGroup>

@@ -1,2 +1,5 @@
-﻿  FunctionSolver.vcxproj -> C:\Users\PC\Documents\Visual Studio 2015\Projects\Solver\FunctionSolver\FunctionSolver\Debug\FunctionSolver.exe
+﻿  MainSolver.c
+c:\users\pc\documents\visual studio 2015\projects\solver\functionsolver\functionsolver\functionsolver\fractionhandler.h(56): warning C4013: 'gcd' undefined; assuming extern returning int
+c:\users\pc\documents\visual studio 2015\projects\solver\functionsolver\functionsolver\functionsolver\fractionhandler.h(56): warning C4013: 'abs' undefined; assuming extern returning int
+  FunctionSolver.vcxproj -> C:\Users\PC\Documents\Visual Studio 2015\Projects\Solver\FunctionSolver\FunctionSolver\Debug\FunctionSolver.exe
   FunctionSolver.vcxproj -> C:\Users\PC\Documents\Visual Studio 2015\Projects\Solver\FunctionSolver\FunctionSolver\Debug\FunctionSolver.pdb (Full PDB)

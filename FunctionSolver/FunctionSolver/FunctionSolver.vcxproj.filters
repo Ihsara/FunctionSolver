@@ -26,9 +26,6 @@
     <ClInclude Include="..\..\..\Solver\FractionHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Solver\FractionType.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\Solver\mathFunc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
