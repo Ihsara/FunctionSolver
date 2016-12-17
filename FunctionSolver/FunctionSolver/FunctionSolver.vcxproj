@@ -150,9 +150,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\Solver\CubicSolver.h" />
+    <ClInclude Include="..\..\..\Solver\FractionHandler.h" />
+    <ClInclude Include="..\..\..\Solver\FractionType.h" />
+    <ClInclude Include="..\..\..\Solver\mathFunc.h" />
     <ClInclude Include="..\..\..\Solver\RootHandler.h" />
-    <ClInclude Include="FractionHandler.h" />
-    <ClInclude Include="mathFunc.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
