@@ -87,11 +87,22 @@ Root rPow(Root a, int deg) {
 		ans.base = 1;
 		ans.para = 1;
 	}
+	else if (deg == a.degree) {
+		ans.degree = 1; 
+		ans.base = a.base; 
+		ans.para = (int)pow((double)a.para, (double)deg); 
+	}
+	else {
+		ans.degree = a.degree; 
+		ans.base = (int)pow((double)a.base, (double)deg);
+		ans.para = (int)pow((double)a.para, (double)deg);
+	}
+
+	return ans;
 }
 
 Root_Fraction rfDiv_Fraction(Root_Fraction divisor, Fraction dividend) {
 	Root_Fraction ans; 
-	int gcd_temp; 
 	ans.degree = divisor.degree; 
 	ans.base = divisor.base; 
 	ans.para = fReduce(fDiv(divisor.para, dividend)); 

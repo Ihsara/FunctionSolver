@@ -1,5 +1,18 @@
 ﻿  MainSolver.c
-c:\users\pc\documents\visual studio 2015\projects\solver\functionsolver\functionsolver\functionsolver\fractionhandler.h(56): warning C4013: 'gcd' undefined; assuming extern returning int
-c:\users\pc\documents\visual studio 2015\projects\solver\functionsolver\functionsolver\functionsolver\fractionhandler.h(56): warning C4013: 'abs' undefined; assuming extern returning int
+c:\users\pc\documents\visual studio 2015\projects\solver\functionsolver\functionsolver\functionsolver\cubicsolver.h(38): warning C4101: 'delta_sqr_de': unreferenced local variable
+c:\users\pc\documents\visual studio 2015\projects\solver\functionsolver\functionsolver\functionsolver\cubicsolver.h(38): warning C4101: 'delta_sqr_nu2': unreferenced local variable
+c:\users\pc\documents\visual studio 2015\projects\solver\functionsolver\functionsolver\functionsolver\cubicsolver.h(38): warning C4101: 'delta_sqr_nu1': unreferenced local variable
+c:\users\pc\documents\visual studio 2015\projects\solver\functionsolver\functionsolver\functionsolver\cubicsolver.h(38): warning C4101: 'delta_sqr_nu': unreferenced local variable
+c:\users\pc\documents\visual studio 2015\projects\solver\functionsolver\functionsolver\functionsolver\cubicsolver.h(81): warning C4101: 'b_11': unreferenced local variable
+c:\users\pc\documents\visual studio 2015\projects\solver\functionsolver\functionsolver\functionsolver\cubicsolver.h(81): warning C4101: 'c_12_de': unreferenced local variable
+c:\users\pc\documents\visual studio 2015\projects\solver\functionsolver\functionsolver\functionsolver\cubicsolver.h(81): warning C4101: 'b_12_nu': unreferenced local variable
+c:\users\pc\documents\visual studio 2015\projects\solver\functionsolver\functionsolver\functionsolver\cubicsolver.h(81): warning C4101: 'c_13_nu': unreferenced local variable
+c:\users\pc\documents\visual studio 2015\projects\solver\functionsolver\functionsolver\functionsolver\cubicsolver.h(81): warning C4101: 'c_12': unreferenced local variable
+c:\users\pc\documents\visual studio 2015\projects\solver\functionsolver\functionsolver\functionsolver\cubicsolver.h(81): warning C4101: 'b_12_de': unreferenced local variable
+c:\users\pc\documents\visual studio 2015\projects\solver\functionsolver\functionsolver\functionsolver\cubicsolver.h(81): warning C4101: 'c_13_de': unreferenced local variable
+c:\users\pc\documents\visual studio 2015\projects\solver\functionsolver\functionsolver\functionsolver\cubicsolver.h(81): warning C4101: 'c_11': unreferenced local variable
+c:\users\pc\documents\visual studio 2015\projects\solver\functionsolver\functionsolver\functionsolver\cubicsolver.h(81): warning C4101: 'b_12': unreferenced local variable
+c:\users\pc\documents\visual studio 2015\projects\solver\functionsolver\functionsolver\functionsolver\cubicsolver.h(81): warning C4101: 'c_13': unreferenced local variable
+c:\users\pc\documents\visual studio 2015\projects\solver\functionsolver\functionsolver\functionsolver\cubicsolver.h(81): warning C4101: 'c_12_nu': unreferenced local variable
   FunctionSolver.vcxproj -> C:\Users\PC\Documents\Visual Studio 2015\Projects\Solver\FunctionSolver\FunctionSolver\Debug\FunctionSolver.exe
   FunctionSolver.vcxproj -> C:\Users\PC\Documents\Visual Studio 2015\Projects\Solver\FunctionSolver\FunctionSolver\Debug\FunctionSolver.pdb (Full PDB)

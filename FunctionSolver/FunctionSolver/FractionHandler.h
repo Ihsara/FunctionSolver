@@ -1,6 +1,7 @@
 #ifndef FRACTIONHANDLER_H
 #define FRACTIONHANDLER_H
 #include <stdio.h>
+#include "mathFunc.h"
 
 //Basic data type of fraction 
 typedef struct Fraction{
@@ -98,6 +99,10 @@ Fraction fPow(Fraction a, int deg) {
 	if (deg == 0) {
 		ans.numerator = 1;
 		ans.denominator = 1;
+	}
+	else if (a.numerator == 0) {
+		ans.numerator = 0;
+		ans.denominator = 1; 
 	}
 	else {
 		for (int i = 1; i < deg; i++) {

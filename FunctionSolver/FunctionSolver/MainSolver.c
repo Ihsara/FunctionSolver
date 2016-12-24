@@ -1,55 +1,66 @@
 #include <stdio.h>
+#include <stdlib.h>
+
 #include "FractionHandler.h"
 #include "mathFunc.h"
-
+#include "RootHandler.h"
+#include "CubicSolver.h"
+#include "StringHandler.h"
 
 void main() {
-	Fraction sum, offsets, pro, div, pow;
-	Fraction frac1, frac2;
-	int deg, num;
-	int cont = 1;
 
-	printf("Hello World!\n");
-	frac1 = FractionInput("What fraction do you want to input: ");
-	frac2 = FractionInput("What fraction do you want to input 2: ");
-
-	sum = fAdd( frac1, frac2);
-	printf("Addition: %d/%d\n", sum.numerator, sum.denominator);
-
-	offsets = fSubtract(frac1, frac2);
-	printf("Subtraction: %d/%d\n", offsets.numerator, offsets.denominator);
-
-	pro = fMul(frac1, frac2);
-	printf("Multiplication: %d/%d\n", pro.numerator, pro.denominator);
-
-	div = fDiv(frac1, frac2);
-	printf("Division: %d/%d\n", div.numerator, div.denominator);
-
-	printf("Please enter degree for power of input 1: ");
-	scanf_s("  %d", &deg);
-	pow = fPow(frac1, deg );
-	printf("Power: %d/%d\n", pow.numerator, pow.denominator);
+	Fraction paraList[4]; 	
+	Fraction dh_Diff, h_sqr, delta_squr;
+	Fraction A, B, c_1; 
+	char paraNames[] = { 'A', 'B', 'C', 'D' };
+	int ans = 1; 
 
 	do {
-		printf("Check if int n is a power of k. \nPlease type in n: ");
-		scanf_s(" %d", &num);
-		printf("Please type in k: ");
-		scanf_s(" %d", &deg);
+		system("cls");
+		greetingsMsg();
 
-		int result = mRoot(num, deg);
-		if (result == NOT_FOUND) {
-			printf("There is no result for a where a^k = n!\n ");
+		for (int index = 0; index < 4; index++) {
+			//char temp = sprintf_s("Please enter value for parameter ", "%s: ", paraNames[index]);
+			char temp[100];
+			char constMsg[] = "Please enter value for parameter ";
+			sprintf_s(temp, 100, "%s%c%s", constMsg, paraNames[index], ": ");
+			paraList[index] = FractionInput(temp);
+		}
+
+		c_1 = cuDepressedPara(paraList, &A, &B);
+		delta_squr = cuDeltaCal(paraList, &dh_Diff, &h_sqr);
+		/* Debugging
+		printf("dhDiff: %d/%d.\n", dh_Diff);
+		printf("Delta squared: %d/%d.\n", delta_squr);
+		printf("h squared: %d/%d.\n", h_sqr.numerator, h_sqr.denominator);
+		printf("c_1: %d/%d.\n", c_1.numerator, c_1.denominator);
+		printf("A: %d/%d.\n", A.numerator, A.denominator);
+		printf("B: %d/%d.\n", B.numerator, B.denominator);
+		*/
+
+		if (dh_Diff.numerator > 0 && dh_Diff.denominator >0) {
+			//printf("One real root!\n");
+			oneRtMsg(cuOneRealRt(delta_squr, h_sqr, paraList), paraList);
+		}
+		else if ((dh_Diff.numerator < 0 && dh_Diff.denominator >0) || (dh_Diff.numerator > 0 && dh_Diff.denominator <0)) {
+			//printf("Three real roots!\n");
+			threeRtMsg(h_sqr, delta_squr, c_1);
 		}
 		else {
-			printf("Result = %d\n", result);
+			//printf("Repeated roots!\n");
+			repeatedRtMsg(cuDeltaCal(paraList, &A, &B));
 		}
-		
-		printf("Cont. ? (1/0)");
-		scanf_s(" %d", &cont); 		
-	} while (cont == 1);
 
+		getchar();
+		printf("Continue?(1/0): ");
+		scanf_s("%d", &ans);
+	} while (ans == 1);
+	
+
+	printf("This concludes the program!\n");
 	getchar();
 
 }
-  
+
+
 
