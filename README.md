@@ -1,6 +1,12 @@
 # FunctionSolver
 C project winter'16. A basic solver for 3rd functions.
 
+Mathematical reference:
+
+http://www.sosmath.com/algebra/factor/fac11/fac11.html 
+
+http://www.sosmath.com/algebra/factor/fac111/fac111.html
+
 This is the program to give out solution for a cubic function in Latex form.
 The program will accept integer or rational number(x/y with x,y are integers).
 
